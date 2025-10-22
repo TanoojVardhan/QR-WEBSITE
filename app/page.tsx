@@ -69,12 +69,12 @@ export default function Home() {
   function fileToImage(file: File): Promise<HTMLImageElement> {
     return new Promise((resolve, reject) => {
       const url = URL.createObjectURL(file);
-      const img = new Image();
+      const img = document.createElement('img');
       img.onload = () => {
         URL.revokeObjectURL(url);
         resolve(img);
       };
-      img.onerror = (e) => reject(e);
+      img.onerror = () => reject(new Error('Failed to load image'));
       img.src = url;
     });
   }

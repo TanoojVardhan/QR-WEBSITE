@@ -70,12 +70,12 @@ export default function QRPage() {
   function fileToImage(file: File): Promise<HTMLImageElement> {
     return new Promise((resolve, reject) => {
       const url = URL.createObjectURL(file);
-      const img = new Image();
+      const img = document.createElement('img');
       img.onload = () => {
         URL.revokeObjectURL(url);
         resolve(img);
       };
-      img.onerror = (e) => reject(e);
+      img.onerror = () => reject(new Error('Failed to load image'));
       img.src = url;
     });
   }
@@ -96,7 +96,7 @@ export default function QRPage() {
   return (
     <main className="min-h-screen bg-background flex flex-col items-center justify-center py-8 px-2">
       <div className="text-center mb-8">
-        <img src="/next.svg" alt="Next.js" className="h-12 mx-auto mb-2" />
+        <Image src="/next.svg" alt="Next.js" width={180} height={48} className="h-12 mx-auto mb-2" />
         <h1 className="text-4xl font-bold mb-2">QR Code Generator</h1>
         <p className="text-muted-foreground text-lg">Create custom QR codes with colors and logos</p>
       </div>
@@ -143,7 +143,7 @@ export default function QRPage() {
         </Card>
       </div>
       <footer className="text-center text-muted-foreground mt-12 text-base">
-        Made with Next.js, shadcn UI & QRCode.js
+        Made with Next.js, shadcn UI &amp; QRCode.js
       </footer>
     </main>
   );
