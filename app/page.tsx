@@ -2,6 +2,7 @@
 "use client";
 // --- QR code generator main page ---
 import React, { useRef, useState } from "react";
+import Image from "next/image";
 import QRCode from "qrcode";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -187,8 +188,8 @@ export default function Home() {
         </Card>
       </div>
       <footer className="relative text-center text-muted-foreground mt-12 text-base">
-        If this QR code doesn't work, just pretend it does. 😄
-  <img src="/Tanooj Logo.png" alt="logo" style={{position: "fixed", right: 16, bottom: 16, width: 72, height: 72, zIndex: 50, opacity: 0.85}} />
+        If this QR code doesn&apos;t work, just pretend it does. 😄
+        <Image src="/Tanooj Logo.png" alt="logo" width={72} height={72} style={{position: "fixed", right: 16, bottom: 16, zIndex: 50, opacity: 0.85}} />
       </footer>
     </main>
   );
