@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
+import Image from "next/image";
 import QRCode from "qrcode";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -134,7 +135,7 @@ export default function QRPage() {
           <CardContent className="flex flex-col items-center">
             <canvas ref={canvasRef} width={320} height={320} className="rounded shadow mb-2" />
             {dataUrl ? (
-              <img src={dataUrl} alt="qr" className="rounded shadow max-w-xs" />
+              <Image src={dataUrl} alt="qr" width={300} height={300} className="rounded shadow max-w-xs" />
             ) : (
               <div className="text-muted-foreground mt-2">Preview will appear here after generation</div>
             )}
