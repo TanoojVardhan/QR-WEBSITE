@@ -1,0 +1,160 @@
+
+.root {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Inter, system-ui, Arial, sans-serif;
+  padding: 0;
+}
+.hero {
+  text-align: center;
+  padding: 40px 0 16px 0;
+}
+.logo {
+  height: 48px;
+  margin-bottom: 8px;
+}
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+.cardGrid {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+
+.card {
+
+}
+.card * {
+  color: #111 !important;
+  font-weight: bold !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: #171717;
+    color: #ededed;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.25);
+  }
+  .previewBox {
+    background: #222;
+    border: 1px solid #333;
+  }
+}
+
+.previewCard {
+  align-items: center;
+}
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #111;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #111;
+}
+.textarea {
+  width: 100%;
+  font-size: 15px;
+  margin-top: 4px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #888;
+  resize: vertical;
+  background: inherit;
+  color: #111;
+  font-weight: bold;
+}
+.controls {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  align-items: center;
+}
+.actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+}
+.generateBtn {
+  background: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.generateBtn:hover {
+  background: #0059c6;
+}
+.downloadBtn {
+  background: #ededed;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.downloadBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.previewBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #eee;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 18px 12px;
+  min-width: 320px;
+  color: inherit;
+}
+.canvas {
+  margin-bottom: 8px;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.04);
+}
+.previewImage {
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.04);
+}
+.hint {
+  margin-top: 8px;
+  color: #888;
+  font-size: 0.98rem;
+}
+.marginTop {
+  margin-top: 8px;
+}
+.footer {
+  text-align: center;
+  color: #aaa;
+  font-size: 1rem;
+  margin: 32px 0 0 0;
+}
